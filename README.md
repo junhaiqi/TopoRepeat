@@ -14,7 +14,7 @@ bash Main.sh -i testdata/test.fa -o testdata/test_TopoRepeat
 
 
 ## Overview of TopoRepeat
-`TopoRepeat` is an integrated shell workflow designed to automate the discovery and quantification of tandem repeats (TR) from long-read sequencing data (PacBio HiFi/ONT). It seamlessly combines read subsampling, self-alignment, unit inference, and sequence clustering into a single execution command.
+`TopoRepeat` is an integrated shell workflow designed to automate the discovery and quantification of tandem repeats (TR) from long-read sequencing data (PacBio HiFi/CLR/ONT). It seamlessly combines read subsampling, self-alignment, unit inference, and sequence clustering into a single execution command.
 
 The pipeline integrates `minimap2` for alignment, `r2rtr` for unit inference, `raEDClust` for unit clustering, and `srfutils.js` for abundance estimation. It allows users to go from raw FASTQ files to clustered consensus units and abundance tables without manual intervention.
 ## Table of contents
@@ -111,7 +111,7 @@ Options [Step 3: SRF Analysis]:
 
 ## Example
 
-un the pipeline on PacBio CLR data, sampling 10% of reads, using 24 threads, and stricter clustering parameters:
+Run the pipeline on PacBio CLR data, sampling 10% of reads, using 24 threads, and stricter clustering parameters:
 
 ```bash
 bash Main.sh \
@@ -121,6 +121,11 @@ bash Main.sh \
   -p 10 \
   -x ava-pb \
   -S 0.95
+```
+
+The command line above estimates the abundance of repeat units by mapping them to raw reads. If you already have repeat units (units.fa) and a high-quality reference genome or contigs (ref.fa), you can estimate their abundance based on those:
+```bash
+TRAnalyzer.sh -i ref.fa -r units.fa -o output
 ```
 
 ## Output
@@ -146,3 +151,4 @@ MIT License.
 
 ## Cite
 None
+
