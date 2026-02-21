@@ -125,7 +125,7 @@ bash Main.sh \
 
 The command line above estimates the abundance of repeat units by mapping them to raw reads. If you already have repeat units (units.fa) and a high-quality reference genome or contigs (ref.fa), you can estimate their abundance based on those:
 ```bash
-TRAnalyzer.sh -i ref.fa -r units.fa -o output
+bash TRAnalyzer.sh -i ref.fa -r units.fa -o output
 ```
 
 ## Output
@@ -151,6 +151,7 @@ MIT License.
 
 ## Cite
 None
+
 
 
 
