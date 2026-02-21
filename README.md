@@ -16,7 +16,7 @@ bash Main.sh -i testdata/test.fa -o testdata/test_TopoRepeat
 ## Overview of TopoRepeat
 `TopoRepeat` is an integrated shell workflow designed to automate the discovery and quantification of tandem repeats (TR) from long-read sequencing data (PacBio HiFi/CLR/ONT). It seamlessly combines read subsampling, self-alignment, unit inference, and sequence clustering into a single execution command.
 
-The pipeline integrates [minimap2](https://github.com/lh3/minimap2) for alignment, [r2rtr](https://github.com/junhaiqi/r2rtr) for unit inference, [raEDClust](https://github.com/junhaiqi/raEDClust) for unit clustering, and `srfutils.js` for abundance estimation. It allows users to go from raw FASTQ files to clustered consensus units and abundance tables without manual intervention.
+The pipeline integrates [minimap2](https://github.com/lh3/minimap2) for alignment, [r2rtr](https://github.com/junhaiqi/r2rtr) for unit inference, [raEDClust](https://github.com/junhaiqi/raEDClust) for unit clustering, and [srfutils.js](https://github.com/lh3/srf) for abundance estimation. It allows users to go from raw FASTQ files to clustered consensus units and abundance tables without manual intervention.
 ## Table of contents
 
   * [Requirements](#requirements)
@@ -151,5 +151,6 @@ MIT License.
 
 ## Cite
 None
+
 
 
