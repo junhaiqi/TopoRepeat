@@ -37,7 +37,7 @@ srfutils.js requires the k8 javascript engine
 
 
 ## Installation
-### one-click installation:
+### One-Click installation:
 ```bash
 chmod +x install.sh && ./install.sh
 ```
@@ -151,6 +151,7 @@ MIT License.
 
 ## Cite
 None
+
 
 
 
